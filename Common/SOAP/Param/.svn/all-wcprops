@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/SOAP/Param
+END
+LoginParam.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/SOAP/Param/LoginParam.h
+END
+BaseParam.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/SOAP/Param/BaseParam.h
+END
+BaseParam.mm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/SOAP/Param/BaseParam.mm
+END
+LoginParam.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/SOAP/Param/LoginParam.m
+END

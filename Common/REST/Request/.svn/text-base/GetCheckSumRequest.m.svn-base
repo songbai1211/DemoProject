@@ -1,0 +1,22 @@
+//
+//  GetCheckSumRequest.m
+//  DemoProject
+//
+//  Created by apple on 13-8-4.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import "GetCheckSumRequest.h"
+#import "GetCheckSumResponse.h"
+
+@implementation GetCheckSumRequest
+
+- (NSString *)url {
+    return [NSString stringWithFormat:GETCHECKSUM, self.phone];
+}
+
+- (Class)responseClass {
+	return [GetCheckSumResponse class];
+}
+
+@end

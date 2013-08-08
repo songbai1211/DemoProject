@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xingyuan/!svn/ver/67/trunk/xinyuanProject/Vendor/SSToolKit
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Vendor/SSToolKit/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Vendor/SSToolKit/Rakefile
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Vendor/SSToolKit/.gitignore
+END
+VERSION
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Vendor/SSToolKit/VERSION
+END
+SSToolkit.podspec
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Vendor/SSToolKit/SSToolkit.podspec
+END
+Changelog.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Vendor/SSToolKit/Changelog.markdown
+END
+Readme.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Vendor/SSToolKit/Readme.markdown
+END

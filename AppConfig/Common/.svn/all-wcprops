@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common
+END
+MMLog.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/MMLog.h
+END
+MMLog.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/MMLog.m
+END
+UserInfoFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/UserInfoFactory.h
+END
+UIFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/UIFactory.h
+END
+UIFactory.mm
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/UIFactory.mm
+END
+UserInfoFactory.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/UserInfoFactory.m
+END

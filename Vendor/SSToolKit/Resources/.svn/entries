@@ -1,0 +1,113 @@
+10
+
+dir
+69
+https://szvlang.xicp.net/svn/xingyuan/trunk/xinyuanProject/Vendor/SSToolKit/Resources
+https://szvlang.xicp.net/svn/xingyuan
+
+
+
+2013-08-02T12:16:51.750828Z
+57
+zhouzhicun
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+52643ce2-93eb-b249-b65f-64a06a91d552
+
+ja.lproj
+dir
+
+zh_Hans.lproj
+dir
+
+zh_Hant.lproj
+dir
+
+id.lproj
+dir
+
+en.lproj
+dir
+
+fr.lproj
+dir
+
+es.lproj
+dir
+
+nl.lproj
+dir
+
+ko.lproj
+dir
+
+it.lproj
+dir
+
+ms.lproj
+dir
+
+Images
+dir
+
+pt.lproj
+dir
+
+SSToolkitResources-Info.plist
+file
+
+
+
+
+2013-08-08T12:33:49.000000Z
+491bd9c6ae51253342468ef56ab7c94c
+2013-08-02T12:16:51.750828Z
+57
+zhouzhicun
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1394
+
+ru.lproj
+dir
+
+pt_PT.lproj
+dir
+
+sv.lproj
+dir
+
+de.lproj
+dir
+

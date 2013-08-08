@@ -1,0 +1,133 @@
+//
+//  BaseRestRequest.h
+//  DemoProject
+//
+//  Created by ll on 13-7-5.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "AFNetworking.h"
+
+@class BaseRestRequest;
+@class BaseRestResponse;
+
+@interface BaseRestRequest : NSObject
+
+@property(nonatomic, assign)int op;
+@property(nonatomic, assign)int page;
+@property(nonatomic, copy)NSString *type;
+@property(nonatomic, copy)NSString *userId;
+@property(nonatomic, copy)NSString *starId;
+@property(nonatomic, copy)NSString *goodsId;
+
+
+@property(nonatomic, retain)NSMutableDictionary *parameters;
+
+@property (nonatomic, readonly) NSString *session;
+@property (nonatomic, readonly) NSString *url;
+@property (nonatomic, readonly) NSString *requestName;
+@property (nonatomic, readonly) Class responseClass;
+
+- (void)sendJSONRequestWithSuccess:(void (^)(BaseRestRequest *request, BaseRestResponse *response))success
+                           Failure:(void (^)(BaseRestRequest *request, NSError *error))failure;
+
+- (void)sendXMLRequestWithSuccess:(void (^)(BaseRestRequest *request, BaseRestResponse *response))success
+                          Failure:(void (^)(BaseRestRequest *request, NSError *error))failure;
+
+- (void)sendGETRequestWithSuccess:(void (^)(BaseRestRequest *request, BaseRestResponse *response))success
+                          Failure:(void (^)(BaseRestRequest *request, NSError *error))failure;
+
+- (void)sendPOSTRequestWithSuccess:(void (^)(BaseRestRequest *request, BaseRestResponse *response))success
+                           Failure:(void (^)(BaseRestRequest *request, NSError *error))failure;
+
+- (void)downLoadImageWithSuccess:(void (^)(BaseRestRequest *request, BaseRestResponse *response))success
+                         Failure:(void (^)(BaseRestRequest *request, NSError *error))failure;
+
+- (void)showAlertError:(NSError *)error;
+
+@end
+
+
+
+
+
+//API接口
+/*1、首页热门推荐、专属愿望、明星周边、线下活动接口*/
+#define HOTRECOMMEND        @"http://host:port/goodslist/?type=hotrecommend&page=%d&userid=%@"
+#define SPECIALWISH         @"http://host:port/goodslist/?type=specialwish&page=%d&userid=%@"
+#define STARRELATED         @"http://host:port/goodslist/?type=starrelated&page=%d&userid=%@"
+#define OFFLINEACTIVITY     @"http://host:port/goodslist/?type=offlineactivity&page=%d&userid=%@"
+
+/*2、艺人列表，分页显示所有的艺人*/
+#define STARLIST            @"http://host:port/starlist/?page=%d&userid=%@"
+
+/*3、艺人详情*/
+#define STARDETAIL          @"http://host:port/stardetail/?starid=%@&userid=%@"
+
+/*4、艺人商品列表*/
+#define STARGOODSLIST       @"http://host:port/stargoodslist/?startid=%@&page=%d&userid=%@"
+
+/*5、艺人的粉丝愿望列表*/
+#define STARWISHLIST        @"http://host:port/starwishlist/?startid=%@&page=%d&userid=%@"
+
+/*6、顶愿望*/
+#define SUPPORTWISH         @"http://host:port/supportwish/?wishid=%@&userid=%@&op=%d"
+
+/*7、关注艺人*/
+#define FOLLOWSTAR          @"http://host:port/followstar/?starid=%@&userid=%@&op=%d"
+
+/*8、商品详情*/
+#define GOODDETAIL          @"http://host:port/goodsdetail/?goodsid=%@"
+
+/*9、商品评论列表*/
+#define GOODCOMMENTLIST     @"http://host:port/goodscomment/list/?goodsid=%@&page=%d"
+
+/*10、发表商品评论 POST请求*/
+#define GOODCOMMENT         @"http://host:port/goodscomment/comment/"
+
+/*11、商品购买页*/
+#define GOODBUYPAGE         @"http://host:port/goods/buypage/?goodsid=%@&userid=%@"
+
+/*12、支付待定*/
+
+/*13、注册 POST接口*/
+#define REGISTER            @" http://host:port/user/register/"
+
+/*14、登录 POST接口*/
+#define LOGIN               @"http://host:port/user/login/"
+
+/*15、未读消息数轮询接口*/
+#define UNREADMESSAGE       @"http://host:port/msg/unreadnum/?userid=%@"
+
+/*16、消息列表*/
+#define MESSAGELIST         @"http://host:port/msg/list/?userid=%@&page=%d"
+
+/*17、关注艺人列表*/
+#define FOLLOWSTARLIST      @"http://host:port/user/followstarlist/?userid=%@&page=%d"
+
+/*18、粉丝列表*/
+#define FANSLIST            @"http://host:port/user/fanslist/?userid=%@&page=%d"
+
+/*19、粉丝个人详情待定*/
+
+/*20、我的订单列表*/
+#define MYORDERLIST         @"http://host:port/order/list/?userid=%@&page=%d&type=%@"
+
+
+/*21、订单详情待定*/
+
+/*22、启动画面*/
+#define STARTPAGE           @"http://host:port/startup/?version=%@"
+
+/*23、发布愿望 POST请求*/
+#define PUBWISH             @"http://host:port/user/pubwish/"
+
+
+
+
+
+
+
+
+

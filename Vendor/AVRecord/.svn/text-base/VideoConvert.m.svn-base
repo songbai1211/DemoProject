@@ -1,0 +1,371 @@
+//
+//  VideoConvert.m
+//  DemoProject
+//
+//  Created by name on 13-8-5.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import "VideoConvert.h"
+#import "UIImage-Extensions.h"
+
+@interface VideoConvert()
+
+- (BOOL)createWriter;
+- (void)openMedia:(NSString*)file;
+- (void)readVideo:(AVURLAsset*)asset;
+- (void)readAudio:(AVURLAsset*)asset;
+- (void)removeFile:(NSURL *)fileURL;
+- (void)changeSample:(CMSampleBufferRef)sampleBuffer;
+- (void)writeSampleBuffer:(CMSampleBufferRef)sampleBuffer ofType:(NSString *)mediaType;
+- (void)saveToImage:(CMSampleBufferRef)sampleBuffer newImage:(CGImageRef)newImage;
+- (void)initRotateSize;
+- (NSString *)dataFilePath;
+
+@end
+
+@implementation VideoConvert
+
+@synthesize outputFileName;
+@synthesize audioSampleRate;
+@synthesize audioEncodeBitRate;
+@synthesize videoWidth;
+@synthesize videoHeight;
+@synthesize videoEncodeBitRate;
+@synthesize videoFrames;
+@synthesize audioChannels;
+@synthesize saveVideoToImage;
+@synthesize logoRect;
+@synthesize logoImage;
+@synthesize rotateSize;
+
+- (id)init {
+	self = [super init];
+	if (self) {
+        
+        //音频
+        audioSampleRate     = 44100/2;
+        audioEncodeBitRate  = 24000;
+        audioChannels       = 1;
+        
+        //视频
+        videoHeight         = 480;
+        videoWidth          = 320;
+        videoFrames         = 15;
+        videoEncodeBitRate  = 200*1000;
+
+        [self initRotateSize];
+	}
+	return self;
+}
+
+- (void)dealloc {
+    _videoReader    = nil;
+    _audioReader    = nil;
+    _videoInput     = nil;
+    _audioInput     = nil;
+    _writer         = nil;
+}
+
+
+
+-(void) convert{
+    [_writer startWriting];
+    CMTime time;
+    
+    AVAssetReaderTrackOutput * outputVideo = [_videoReader.outputs objectAtIndex:0];
+    _writeVideoCount = 0;
+    while ([_videoReader status] == AVAssetReaderStatusReading)
+    {
+        CMSampleBufferRef sampleBuffer = [outputVideo copyNextSampleBuffer];
+        if (sampleBuffer){
+            time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
+            if(_writeVideoCount==0)
+                [_writer startSessionAtSourceTime:time];
+            [self changeSample:sampleBuffer];
+            [self writeSampleBuffer:sampleBuffer ofType:AVMediaTypeVideo];
+            CFRelease(sampleBuffer);
+        }
+        _writeVideoCount++;
+        NSLog(@"%d",_writeVideoCount);
+    }
+    //    [_writer endSessionAtSourceTime:time];
+    
+    
+    //转换音频：
+    AVAssetReaderTrackOutput * outputAudio = [_audioReader.outputs objectAtIndex:0];
+    _writeAudioCount = 0;
+    while ([_audioReader status] == AVAssetReaderStatusReading)
+    {
+        CMSampleBufferRef sampleBuffer = [outputAudio copyNextSampleBuffer];
+        if (sampleBuffer){
+            time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
+            if(_writeAudioCount==0)
+                [_writer startSessionAtSourceTime:time];
+            [self writeSampleBuffer:sampleBuffer ofType:AVMediaTypeAudio];
+            CFRelease(sampleBuffer);
+        }
+        _writeAudioCount++;
+        NSLog(@"%d",_writeAudioCount);
+    }
+    //    [_writer endSessionAtSourceTime:time];
+    
+    [_videoInput markAsFinished];
+    [_audioInput markAsFinished];
+    [_writer finishWriting];
+    
+    NSLog(@"convert ok");
+}
+
+
+#pragma  mark private
+
+- (BOOL) createWriter
+{
+    if ([[NSFileManager defaultManager] fileExistsAtPath:outputFileName])
+        [[NSFileManager defaultManager] removeItemAtPath:outputFileName error:NULL];
+    
+    NSError *error = nil;
+    _writer = [[AVAssetWriter alloc] initWithURL:[NSURL fileURLWithPath:outputFileName] fileType:AVFileTypeMPEG4 error:&error];
+    
+    if (error)
+    {
+        NSLog(@"%@", error);
+        return NO;
+    }
+    
+    AudioChannelLayout acl;
+    bzero( &acl, sizeof(acl));
+    if(audioChannels >= 2 )
+        acl.mChannelLayoutTag = kAudioChannelLayoutTag_Stereo;
+    else
+        acl.mChannelLayoutTag = kAudioChannelLayoutTag_Mono;
+    
+    NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                              [NSNumber numberWithInt:kAudioFormatMPEG4AAC],    AVFormatIDKey,
+                              [NSNumber numberWithFloat:audioSampleRate],       AVSampleRateKey,
+                              [NSNumber numberWithInt:audioChannels],           AVNumberOfChannelsKey,
+                              [NSNumber numberWithInt:audioEncodeBitRate],      AVEncoderBitRateKey,
+                              [NSData dataWithBytes:&acl length:sizeof(acl)],   AVChannelLayoutKey,
+                              nil ];
+    
+    _audioInput = [[AVAssetWriterInput alloc] initWithMediaType:AVMediaTypeAudio outputSettings:settings];
+    _audioInput.expectsMediaDataInRealTime = NO;
+    [_writer addInput:_audioInput];
+    
+    NSDictionary *codecSettings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                   [NSNumber numberWithInt:videoEncodeBitRate], AVVideoAverageBitRateKey,
+                                   [NSNumber numberWithInt:videoFrames],        AVVideoMaxKeyFrameIntervalKey,
+                                   AVVideoProfileLevelH264Main31,               AVVideoProfileLevelKey,
+                                   nil];
+    
+    settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                AVVideoCodecH264,                       AVVideoCodecKey,
+                [NSNumber numberWithInt:videoWidth],    AVVideoWidthKey,
+                [NSNumber numberWithInt:videoHeight],   AVVideoHeightKey,
+                codecSettings,                          AVVideoCompressionPropertiesKey,
+                nil];
+    
+    _videoInput = [[AVAssetWriterInput alloc] initWithMediaType:AVMediaTypeVideo outputSettings:settings];
+    _videoInput.expectsMediaDataInRealTime = NO;
+    [_writer addInput:_videoInput];
+    
+    return YES;
+}
+
+-(void)openMedia:(NSString*)file
+{
+    NSURL* url = [[NSURL alloc] initFileURLWithPath:file];
+    AVURLAsset * asset = [AVURLAsset URLAssetWithURL:url options:nil];
+    
+    [self readVideo:asset];
+    [self readAudio:asset];
+    [self createWriter];
+}
+
+- (void)readVideo:(AVURLAsset*)asset
+{
+    AVAssetTrack * videoTrack = nil;
+    NSArray * tracks = [asset tracksWithMediaType:AVMediaTypeVideo];
+    if ([tracks count] == 1)
+    {
+        videoTrack = [tracks objectAtIndex:0];
+        NSError * error = nil;
+        
+        _videoReader = [[AVAssetReader alloc] initWithAsset:asset error:&error];
+        if (error)
+            NSLog(@"_videoReader fail!\n");
+        
+        NSString* key = (NSString*)kCVPixelBufferPixelFormatTypeKey;
+        NSNumber* value = [NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA];
+        NSDictionary* videoSettings =
+        [NSDictionary dictionaryWithObject:value forKey:key];
+        
+        [_videoReader addOutput:[AVAssetReaderTrackOutput
+                                 assetReaderTrackOutputWithTrack:videoTrack
+                                 outputSettings:videoSettings]];
+        [_videoReader startReading];
+        
+    }
+}
+
+- (void)readAudio:(AVURLAsset*)asset{
+    AVAssetTrack * audioTrack = nil;
+    NSArray * tracks = [asset tracksWithMediaType:AVMediaTypeAudio];
+    if ([tracks count] == 1)
+    {
+        audioTrack = [tracks objectAtIndex:0];
+        NSError * error = nil;
+        
+        _audioReader = [[AVAssetReader alloc] initWithAsset:asset error:&error];
+        if (error)
+            NSLog(@"_audioReader fail!\n");
+        
+        NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithInt:kAudioFormatLinearPCM], AVFormatIDKey,
+                                  nil ];
+        
+        [_audioReader addOutput:[AVAssetReaderTrackOutput
+                                 assetReaderTrackOutputWithTrack:audioTrack
+                                 outputSettings:settings]];
+        [_audioReader startReading];
+    }
+}
+
+
+
+- (void)removeFile:(NSURL *)fileURL
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *filePath = [fileURL path];
+    if ([fileManager fileExistsAtPath:filePath]) {
+        NSError *error;
+        BOOL success = [fileManager removeItemAtPath:filePath error:&error];
+        if (!success)
+        {
+            // [self showError:error];
+            NSLog(@"remove failed");
+        }
+    }
+}
+
+
+
+-(void)changeSample:(CMSampleBufferRef)sampleBuffer {
+    
+    @autoreleasepool {
+        /*Lock the image buffer*/
+        CVImageBufferRef imageBuffer=NULL;
+        imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+        CVPixelBufferLockBaseAddress(imageBuffer,0);
+        /*Get information about the image*/
+        uint8_t *baseAddress = (uint8_t *)CVPixelBufferGetBaseAddress(imageBuffer);
+        size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+        int width = CVPixelBufferGetWidth(imageBuffer);
+        int height = CVPixelBufferGetHeight(imageBuffer);
+        
+        //    UIGraphicsBeginImageContext(rotateSize);
+        /*Create a CGImageRef from the CVImageBufferRef*/
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        CGContextRef newContext = CGBitmapContextCreate(baseAddress, width, height, 8, bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+        CGImageRef newImage = CGBitmapContextCreateImage(newContext);
+        
+        CGContextTranslateCTM(newContext, rotateSize.width/2, rotateSize.height/2);
+        CGContextRotateCTM(newContext, -90.0 * M_PI / 180);
+        CGContextScaleCTM(newContext, 1.0, 1.0);
+        CGContextDrawImage(newContext, CGRectMake(-width/2, -height/2, width, height), newImage);
+        
+        if(logoImage)
+            CGContextDrawImage(newContext,logoRect,logoImage.CGImage);
+        if(saveVideoToImage)
+            [self saveToImage:sampleBuffer newImage:newImage];
+        
+        
+        //[_customLayer performSelectorOnMainThread:@selector(setContents:) withObject: (id) newImage waitUntilDone:YES];
+        //[_imageView performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:YES];
+        
+        
+        
+        CGContextRelease(newContext);
+        CGColorSpaceRelease(colorSpace);
+        CGImageRelease(newImage);
+        CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+    }
+}
+
+
+
+- (void) writeSampleBuffer:(CMSampleBufferRef)sampleBuffer ofType:(NSString *)mediaType
+{
+    //    if ( _writer.status == AVAssetWriterStatusUnknown ) {
+    //
+    //        if ([_writer startWriting]) {
+    //            [_writer startSessionAtSourceTime:CMSampleBufferGetPresentationTimeStamp(sampleBuffer)];
+    //        }
+    //    }
+    
+    if ( _writer.status == AVAssetWriterStatusWriting ) {
+        
+        if (mediaType == AVMediaTypeVideo) {
+            if (_videoInput.readyForMoreMediaData)
+                [_videoInput appendSampleBuffer:sampleBuffer];
+            
+        }
+        
+        if (mediaType == AVMediaTypeAudio) {
+            if (_audioInput.readyForMoreMediaData)
+                [_audioInput appendSampleBuffer:sampleBuffer];
+            
+        }
+    }
+}
+
+
+-(void)saveToImage:(CMSampleBufferRef)sampleBuffer newImage:(CGImageRef)newImage{
+    CMTime n = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
+    int m = n.value / n.timescale;
+    if(m % saveVideoToImage == 0){
+        NSString* s = [NSString stringWithFormat:@"%@convert_video_%d.jpg",[self dataFilePath],m];
+        if(![s isEqualToString:_lastSaveFile]){
+            UIImage *image= [UIImage imageWithCGImage:newImage scale:1.0 orientation:UIImageOrientationRight];
+            image = [image imageAtRect:CGRectMake(80, 0, 320, 320)];
+            NSData* data = UIImageJPEGRepresentation(image,0.8f);
+            NSLog(@"saveToImage:%@",s);
+            [data writeToFile:s atomically:YES];
+            image = nil;
+            data  = nil;
+
+            _lastSaveFile = s;
+
+        }
+    }
+}
+
+-(void)initRotateSize{
+    UIView *rotatedViewBox = [[UIView alloc] initWithFrame:CGRectMake(0, 0, videoWidth, videoHeight)];
+    CGAffineTransform t = CGAffineTransformMakeRotation(-90.0/180*M_PI);
+    rotatedViewBox.transform = t;
+    rotateSize = rotatedViewBox.frame.size;
+    rotateSize.width=480;
+    rotateSize.height=480;
+    NSLog(@"rotateSize=%f,%f",rotateSize.width, rotateSize.height);
+}
+
+
+- (NSString *)dataFilePath {
+    NSString* s = [NSString stringWithFormat:@"%@/Library/Caches/",NSHomeDirectory()];
+    //NSLog(@"%@",s);
+    return s;
+}
+
+//-(void)a1{
+//    // get a pointer to the audio bytes
+//    CMItemCount numSamples = CMSampleBufferGetNumSamples(sampleBuffer);
+//    CMBlockBufferRef audioBuffer = CMSampleBufferGetDataBuffer(sampleBuffer);
+//    size_t lengthAtOffset;
+//    size_t totalLength;
+//    char *samples;
+//    CMBlockBufferGetDataPointer(audioBuffer, 0, &lengthAtOffset, &totalLength, &samples);
+//}
+
+@end

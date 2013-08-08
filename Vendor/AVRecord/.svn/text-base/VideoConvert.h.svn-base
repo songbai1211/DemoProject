@@ -1,0 +1,52 @@
+//
+//  VideoConvert.h
+//  DemoProject
+//
+//  Created by name on 13-8-5.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <CoreVideo/CoreVideo.h>
+#import <CoreMedia/CoreMedia.h>
+
+@interface VideoConvert : NSObject
+{
+    AVURLAsset              *_asset;
+    AVAssetReader           *_audioReader;
+    AVAssetReader           *_videoReader;
+    AVAssetWriter           *_writer;
+    AVAssetWriterInput      *_audioInput;
+    AVAssetWriterInput      *_videoInput;
+    AVCaptureDeviceInput    *_deviceVideo;
+    AVCaptureDeviceInput    *_deviceAudio;
+    AVCaptureVideoDataOutput *_captureVideo;
+    AVCaptureAudioDataOutput *_captureAudio;
+
+    int _writeVideoCount;
+    int _writeAudioCount;
+    NSString* _lastSaveFile;
+}
+
+@property (nonatomic, retain) NSString*outputFileName;  //输出文件名
+@property (nonatomic, retain) UIImage* logoImage;       //视频水印
+@property (nonatomic, assign) CGRect logoRect;          //水印范围
+@property (nonatomic, assign) CGSize rotateSize;
+@property (nonatomic, assign) int saveVideoToImage;     //每隔多少秒保存一张截图jpg
+@property (nonatomic, assign) int videoWidth;           //视频宽,默认为480
+@property (nonatomic, assign) int videoHeight;          //视频高,默认为320
+@property (nonatomic, assign) int videoFrames;          //视频压缩后帧率,默认为15
+@property (nonatomic, assign) int videoEncodeBitRate;   //视频压缩后码流,默认为200K
+@property (nonatomic, assign) int audioEncodeBitRate;   //音频压缩后码流,默认为24K
+@property (nonatomic, assign) int audioSampleRate;      //音频采样率，默认为22050
+@property (nonatomic, assign) int audioChannels;        //音频声道，默认为1
+
+-(void) convert;
+
+
+
+
+
+@end

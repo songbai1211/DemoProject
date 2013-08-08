@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response
+END
+StarRelatedResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarRelatedResponse.h
+END
+GoodCommentResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodCommentResponse.h
+END
+GoodDetailResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodDetailResponse.h
+END
+GoodCommentListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodCommentListResponse.m
+END
+SupportWishResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/SupportWishResponse.m
+END
+MyOrderListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/MyOrderListResponse.h
+END
+LoginResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/LoginResponse.m
+END
+StarRelatedResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarRelatedResponse.m
+END
+GoodCommentResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodCommentResponse.m
+END
+GoodDetailResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodDetailResponse.m
+END
+MyOrderListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/MyOrderListResponse.m
+END
+FansListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/FansListResponse.h
+END
+UnReadMessageResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/UnReadMessageResponse.h
+END
+FansListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/FansListResponse.m
+END
+UnReadMessageResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/UnReadMessageResponse.m
+END
+StarDetailResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarDetailResponse.h
+END
+StarDetailResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarDetailResponse.m
+END
+StarListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarListResponse.h
+END
+GoodBuyPageResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodBuyPageResponse.h
+END
+BaseRestResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/BaseRestResponse.h
+END
+StarListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarListResponse.m
+END
+GoodBuyPageResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodBuyPageResponse.m
+END
+SpecialWishResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/SpecialWishResponse.h
+END
+BaseRestResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/BaseRestResponse.m
+END
+MessageListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/MessageListResponse.h
+END
+SpecialWishResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/SpecialWishResponse.m
+END
+PubWishResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/PubWishResponse.h
+END
+HotRecommendResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/HotRecommendResponse.h
+END
+RegisterResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/RegisterResponse.h
+END
+MessageListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/MessageListResponse.m
+END
+PubWishResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/PubWishResponse.m
+END
+FollowStarListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/FollowStarListResponse.h
+END
+RegisterResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/RegisterResponse.m
+END
+HotRecommendResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/HotRecommendResponse.m
+END
+StartPageResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StartPageResponse.h
+END
+FollowStarResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/FollowStarResponse.h
+END
+FollowStarListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/FollowStarListResponse.m
+END
+OfflineActivityResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/OfflineActivityResponse.h
+END
+StartPageResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StartPageResponse.m
+END
+StarWishListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarWishListResponse.h
+END
+FollowStarResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/FollowStarResponse.m
+END
+StarGoodsListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarGoodsListResponse.h
+END
+OfflineActivityResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/OfflineActivityResponse.m
+END
+StarWishListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarWishListResponse.m
+END
+StarGoodsListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/StarGoodsListResponse.m
+END
+GoodCommentListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/GoodCommentListResponse.h
+END
+SupportWishResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/SupportWishResponse.h
+END
+LoginResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/AppConfig/Common/REST/Response/LoginResponse.h
+END

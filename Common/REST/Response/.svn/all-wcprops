@@ -1,0 +1,317 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xingyuan/!svn/ver/59/trunk/xinyuanProject/Common/REST/Response
+END
+StarRelatedResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarRelatedResponse.h
+END
+GoodDetailResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodDetailResponse.h
+END
+GoodCommentResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodCommentResponse.h
+END
+GoodCommentListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodCommentListResponse.m
+END
+SupportWishResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/SupportWishResponse.m
+END
+MyOrderListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/MyOrderListResponse.h
+END
+LoginResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/LoginResponse.m
+END
+StarRelatedResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarRelatedResponse.m
+END
+GoodDetailResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodDetailResponse.m
+END
+GoodCommentResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodCommentResponse.m
+END
+MyOrderListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/MyOrderListResponse.m
+END
+FansListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/FansListResponse.h
+END
+UnReadMessageResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/UnReadMessageResponse.h
+END
+VerifyCheckSumResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/xingyuan/!svn/ver/59/trunk/xinyuanProject/Common/REST/Response/VerifyCheckSumResponse.h
+END
+FansListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/FansListResponse.m
+END
+UnReadMessageResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/UnReadMessageResponse.m
+END
+VerifyCheckSumResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/xingyuan/!svn/ver/59/trunk/xinyuanProject/Common/REST/Response/VerifyCheckSumResponse.m
+END
+StarDetailResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarDetailResponse.h
+END
+StarDetailResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarDetailResponse.m
+END
+GetCheckSumResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/59/trunk/xinyuanProject/Common/REST/Response/GetCheckSumResponse.h
+END
+StarListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarListResponse.h
+END
+GoodBuyPageResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodBuyPageResponse.h
+END
+GetCheckSumResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/59/trunk/xinyuanProject/Common/REST/Response/GetCheckSumResponse.m
+END
+BaseRestResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/59/trunk/xinyuanProject/Common/REST/Response/BaseRestResponse.h
+END
+StarListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarListResponse.m
+END
+GoodBuyPageResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodBuyPageResponse.m
+END
+SpecialWishResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/SpecialWishResponse.h
+END
+BaseRestResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/BaseRestResponse.m
+END
+SpecialWishResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/SpecialWishResponse.m
+END
+MessageListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/MessageListResponse.h
+END
+PubWishResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/PubWishResponse.h
+END
+RegisterResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/RegisterResponse.h
+END
+HotRecommendResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/HotRecommendResponse.h
+END
+MessageListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/MessageListResponse.m
+END
+PubWishResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/PubWishResponse.m
+END
+FollowStarListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/FollowStarListResponse.h
+END
+RegisterResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/RegisterResponse.m
+END
+HotRecommendResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/HotRecommendResponse.m
+END
+StartPageResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StartPageResponse.h
+END
+FollowStarResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/FollowStarResponse.h
+END
+FollowStarListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/FollowStarListResponse.m
+END
+OfflineActivityResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/OfflineActivityResponse.h
+END
+StartPageResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StartPageResponse.m
+END
+StarWishListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarWishListResponse.h
+END
+FollowStarResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/FollowStarResponse.m
+END
+StarGoodsListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarGoodsListResponse.h
+END
+OfflineActivityResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/OfflineActivityResponse.m
+END
+StarWishListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarWishListResponse.m
+END
+StarGoodsListResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/StarGoodsListResponse.m
+END
+GoodCommentListResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/GoodCommentListResponse.h
+END
+SupportWishResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/SupportWishResponse.h
+END
+LoginResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Response/LoginResponse.h
+END

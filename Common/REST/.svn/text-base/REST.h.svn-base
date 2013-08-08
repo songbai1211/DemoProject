@@ -1,0 +1,74 @@
+//
+//  REST.h
+//  DemoProject
+//
+//  Created by ll on 13-7-2.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import "BuyerEntity.h"
+#import "CommentEntity.h"
+#import "FansEntity.h"
+#import "GoodDetailEntity.h"
+#import "GoodInfoEntity.h"
+#import "MessageEntity.h"
+#import "OrderEntity.h"
+#import "StarEntity.h"
+#import "WishEntity.h"
+
+#import "HotRecommendRequest.h"
+#import "SpecialWishRequest.h"
+#import "StarRelatedRequest.h"
+#import "OfflineActivityRequest.h"
+#import "StarListRequest.h"
+#import "StarDetailRequest.h"
+#import "StarGoodsListRequest.h"
+#import "StarWishListRequest.h"
+#import "SupportWishRequest.h"
+#import "FollowStarRequest.h"
+#import "GoodDetailRequest.h"
+#import "GoodCommentListRequest.h"
+#import "GoodCommentRequest.h"
+#import "GoodBuyPageRequest.h"
+#import "RegisterRequest.h"
+#import "LoginRequest.h"
+#import "UnReadMessageRequest.h"
+#import "MessageListRequest.h"
+#import "FollowStarListRequest.h"
+#import "FansListRequest.h"
+#import "MyOrderListRequest.h"
+#import "StartPageRequest.h"
+#import "PubWishRequest.h"
+#import "GetCheckSumRequest.h"
+#import "VerifyCheckSumRequest.h"
+
+
+#import "HotRecommendResponse.h"
+#import "SpecialWishResponse.h"
+#import "StarRelatedResponse.h"
+#import "OfflineActivityResponse.h"
+#import "StarListResponse.h"
+#import "StarDetailResponse.h"
+#import "StarGoodsListResponse.h"
+#import "StarWishListResponse.h"
+#import "SupportWishResponse.h"
+#import "FollowStarResponse.h"
+#import "GoodDetailResponse.h"
+#import "GoodCommentListResponse.h"
+#import "GoodCommentResponse.h"
+#import "GoodBuyPageResponse.h"
+#import "RegisterResponse.h"
+#import "LoginResponse.h"
+#import "UnReadMessageResponse.h"
+#import "MessageListResponse.h"
+#import "FollowStarListResponse.h"
+#import "FansListResponse.h"
+#import "MyOrderListResponse.h"
+#import "StartPageResponse.h"
+#import "PubWishResponse.h"
+#import "GetCheckSumResponse.h"
+#import "VerifyCheckSumResponse.h"
+
+
+
+

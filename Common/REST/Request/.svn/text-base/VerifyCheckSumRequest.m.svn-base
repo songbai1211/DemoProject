@@ -1,0 +1,22 @@
+//
+//  VerifyCheckSumRequest.m
+//  DemoProject
+//
+//  Created by apple on 13-8-4.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import "VerifyCheckSumRequest.h"
+#import "VerifyCheckSumResponse.h"
+
+@implementation VerifyCheckSumRequest
+
+- (NSString *)url {
+    return [NSString stringWithFormat:VERIFYCHECKSUM, self.phone, self.checksum];
+}
+
+- (Class)responseClass {
+	return [VerifyCheckSumResponse class];
+}
+
+@end

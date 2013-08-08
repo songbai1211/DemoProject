@@ -1,0 +1,15 @@
+//
+//  VerifyCheckSumRequest.h
+//  DemoProject
+//
+//  Created by apple on 13-8-4.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import "BaseRestRequest.h"
+
+@interface VerifyCheckSumRequest : BaseRestRequest
+
+@property(nonatomic, copy)NSString *phone;
+@property(nonatomic, copy)NSString *checksum;
+@end

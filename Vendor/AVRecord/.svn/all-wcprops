@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xingyuan/!svn/ver/64/trunk/xinyuanProject/Vendor/AVRecord
+END
+VideoRecord.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/xingyuan/!svn/ver/58/trunk/xinyuanProject/Vendor/AVRecord/VideoRecord.m
+END
+VideoConvert.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/xingyuan/!svn/ver/61/trunk/xinyuanProject/Vendor/AVRecord/VideoConvert.m
+END
+UIImage-Extensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/xingyuan/!svn/ver/64/trunk/xinyuanProject/Vendor/AVRecord/UIImage-Extensions.h
+END
+lame.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xingyuan/!svn/ver/58/trunk/xinyuanProject/Vendor/AVRecord/lame.h
+END
+libmp3lame.a
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/xingyuan/!svn/ver/58/trunk/xinyuanProject/Vendor/AVRecord/libmp3lame.a
+END
+AudioRecord.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/xingyuan/!svn/ver/60/trunk/xinyuanProject/Vendor/AVRecord/AudioRecord.h
+END
+UIImage-Extensions.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/xingyuan/!svn/ver/64/trunk/xinyuanProject/Vendor/AVRecord/UIImage-Extensions.m
+END
+AudioRecord.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/xingyuan/!svn/ver/60/trunk/xinyuanProject/Vendor/AVRecord/AudioRecord.m
+END
+VideoRecord.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/xingyuan/!svn/ver/58/trunk/xinyuanProject/Vendor/AVRecord/VideoRecord.h
+END
+VideoConvert.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/xingyuan/!svn/ver/61/trunk/xinyuanProject/Vendor/AVRecord/VideoConvert.h
+END

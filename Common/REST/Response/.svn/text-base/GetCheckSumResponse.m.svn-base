@@ -1,0 +1,13 @@
+//
+//  GetCheckSumResponse.m
+//  DemoProject
+//
+//  Created by apple on 13-8-4.
+//  Copyright (c) 2013年 apple. All rights reserved.
+//
+
+#import "GetCheckSumResponse.h"
+
+@implementation GetCheckSumResponse
+
+@end

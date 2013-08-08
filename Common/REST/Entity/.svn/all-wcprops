@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity
+END
+FansEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/FansEntity.m
+END
+CommentEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/CommentEntity.h
+END
+GoodInfoEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/GoodInfoEntity.h
+END
+CommentEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/CommentEntity.m
+END
+GoodInfoEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/GoodInfoEntity.m
+END
+StarEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/StarEntity.h
+END
+WishEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/WishEntity.h
+END
+GoodDetailEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/GoodDetailEntity.h
+END
+OrderEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/OrderEntity.h
+END
+StarEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/StarEntity.m
+END
+WishEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/WishEntity.m
+END
+GoodDetailEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/GoodDetailEntity.m
+END
+OrderEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/OrderEntity.m
+END
+MessageEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/MessageEntity.h
+END
+BuyerEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/BuyerEntity.h
+END
+FansEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/FansEntity.h
+END
+MessageEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/MessageEntity.m
+END
+BuyerEntity.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/xingyuan/!svn/ver/57/trunk/xinyuanProject/Common/REST/Entity/BuyerEntity.m
+END
